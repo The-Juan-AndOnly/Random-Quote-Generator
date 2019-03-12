@@ -30,7 +30,7 @@ const quotes = [
     tag: 'inspirational'
   },
   {
-    quote: "I'm back and dont did it again",
+    quote: "I'm back and done did it again",
     source: 'Joe Santos Garcia',
     citation: 'CodingPhase.com',
     year: '',
