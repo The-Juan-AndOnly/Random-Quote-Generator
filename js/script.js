@@ -5,31 +5,36 @@ const quotes = [
     quote: 'Talk is cheap. Show me the code.',
     source: 'Linus Torvalds',
     citation: 'Twitter',
-    year: '2001'
+    year: '2001',
+    tag: 'inspirational'
   },
   {
     quote: ' You miss 100% of the shots you don’t take',
     source: 'Wayne Gretzky',
     citation: '',
-    year: ''
+    year: '',
+    tag: 'inspirational'
   },
   {
     quote: 'Debt is dumb, cash is King',
     source: 'Dave Ramsey',
     citation: '',
-    year: null
+    year: null,
+    tag: 'financial'
   },
   {
     quote: 'Life is 10% what happens to me and 90% of how I react to it',
     source: 'Charles Swindoll',
     citation: '',
-    year: null
+    year: null,
+    tag: 'inspirational'
   },
   {
-    quote: 'Che Che Che',
+    quote: "I'm back and dont did it again",
     source: 'Joe Santos Garcia',
     citation: 'CodingPhase.com',
-    year: ''
+    year: '',
+    tag: 'humor'
   }
 ];
 
@@ -84,12 +89,16 @@ const printQuote = () => {
       if (quote.year !== '' && quote.year !== null) {
         quoteString += `<span class="year">${quote.year}</span>`;
       }
+      if (quote.tag === 'inspirational') {
+        quoteString += ` <sup class="tag">${quote.tag}</sup>`;
+      }
       quoteString += `</p>`;
       document.querySelector('#quote-box').innerHTML = quoteString;
       // Change button text
       document.querySelector('#loadQuote').textContent = 'Click to stop';
       randomColor();
     }, 3000);
+    document.querySelector('#loadQuote').textContent = 'Retrieving quotes...';
   }
 };
 

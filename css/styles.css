@@ -73,6 +73,11 @@ body {
   font-style: normal;
 }
 
+.tag {
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
 #loadQuote {
   position: relative;
   width: 12em;
