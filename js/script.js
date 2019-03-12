@@ -41,9 +41,9 @@ const getRandomQuote = () => {
 
   // return the value of the quotes araay at the randomNumber position
 };
-// Change background color
+
+// Change background color of the body element
 const randomColor = () => {
-  // Changes background color
   let bgColor;
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -56,10 +56,10 @@ let getQuotes = {
   isRunning: false,
   interval: ''
 };
+
 /*  printQuote function that calls the randomQuote function
     assigns an empty string to quoteString and cumulatively assigns the quote properties also checks to make sure that a year and citation was provided
 */
-
 const printQuote = () => {
   // if our interval is already running it will clear the Interval
   if (getQuotes.isRunning) {

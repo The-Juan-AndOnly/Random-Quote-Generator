@@ -1,7 +1,11 @@
-###Instructions ###
+### Random Quote Generator
 
-Each quote object in the quotes array should have the following properties:
-quote - a string containing the text of the quote that will be displayed on the page.
-source - a string containing the creator of the quote. For example: "Mark Twain" or "Traditional Irish proverb” or "Anonymous".
-citation - optional - a string identifying where the quote comes from, like a speech, publication or a movie. If there is no known publication, do not include this property on the object.
-year - optional - a number identifying the year of the quote. If there is no known year, then do not include this property on the object.
+Initial quote is hard coded to display. When clicking on "show another quote" button a random quote from the Quotes object will be displaed every 3 seconds along with the background changing
+
+## Instructions
+
+1. Click on the demo link above to see the Quote Generator or download files to run on your local machine
+2. Click the "Show another quote" buttton once to start the quote generator
+3. Every 3 seconds a new quote will be displayed along with the background changing
+4. Click on the button again will stop the interval
+   \*Click on button again if you want to restart the interval
