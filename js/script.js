@@ -61,9 +61,11 @@ let getQuotes = {
     assigns an empty string to quoteString and cumulatively assigns the quote properties also checks to make sure that a year and citation was provided
 */
 const printQuote = () => {
-  // if our interval is already running it will clear the Interval
+  // if our interval is already running it will clear the Interval, change the button text back to default and reset isRunning back to false
   if (getQuotes.isRunning) {
     clearInterval(getQuotes.interval);
+    document.querySelector('#loadQuote').innerHTML = 'Show another quote';
+    getQuotes.isRunning = false;
   } else {
     // set our isRunning to true to prevent user from clicking multiple times
     getQuotes.isRunning = true;
@@ -84,6 +86,7 @@ const printQuote = () => {
       }
       quoteString += `</p>`;
       document.querySelector('#quote-box').innerHTML = quoteString;
+      document.querySelector('#loadQuote').innerHTML = 'Click to stop';
       randomColor();
     }, 3000);
   }
