@@ -10,12 +10,13 @@ body {
 }
 
 #quote-box {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  right: 10%;
-  width: 80%;
-  line-height: .5;
+  line-height: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  margin-top: 10%;
 }
 
 .quote {
@@ -26,22 +27,23 @@ body {
   margin: 0;
 }
 
-.quote:before, .quote:after {
+.quote:before,
+.quote:after {
   font-size: 3rem;
   line-height: 2.5rem;
   position: absolute;
 }
 
 .quote:before {
-  content: "“";
-  top: .25em;
-  left: -.5em;
+  content: '“';
+  top: 0.25em;
+  left: -0.5em;
 }
 
 .quote:after {
-  content: "”";
-  bottom: -.1em;
-  margin-left: .1em;
+  content: '”';
+  bottom: -0.1em;
+  margin-left: 0.1em;
   position: absolute;
 }
 
@@ -54,7 +56,7 @@ body {
 }
 
 .source:before {
-  content: "—";
+  content: '—';
 }
 
 .citation {
@@ -62,31 +64,31 @@ body {
 }
 
 .citation:before {
-  content: ", ";
+  content: ', ';
   font-style: normal;
 }
 
 .year:before {
-  content: ", ";
+  content: ', ';
   font-style: normal;
 }
 
 #loadQuote {
-  position: fixed;
+  position: relative;
   width: 12em;
   display: inline-block;
   left: 50%;
   margin-left: -6em;
-  bottom: 150px;
+  bottom: 0;
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
   background-color: #36b55c;
   padding: 15px 0;
-  transition: .5s ;
+  transition: 0.5s;
 }
 #loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 #loadQuote:focus {
@@ -97,7 +99,8 @@ body {
   .quote {
     font-size: 4rem;
   }
-  .quote:before, .quote:after {
+  .quote:before,
+  .quote:after {
     font-size: 6rem;
   }
   .source {
