@@ -35,6 +35,27 @@ const quotes = [
     citation: 'CodingPhase.com',
     year: '',
     tag: 'humor'
+  },
+  {
+    quote: 'If you fail to plan, you are planning to fail!',
+    source: 'Benjamin Franklin',
+    citation: '',
+    year: '',
+    tag: 'inspirational'
+  },
+  {
+    quote: 'Those who cannot remember the past are condemned to repeat it.',
+    source: 'George Santayana',
+    citation: '',
+    year: 1905,
+    tag: 'philosophy'
+  },
+  {
+    quote: 'You better check yourself before you wreck yourself.',
+    source: 'Ice Cube',
+    citation: 'The Predator Album',
+    year: '1992',
+    tag: 'music'
   }
 ];
 
@@ -49,7 +70,6 @@ const getRandomQuote = () => {
 
 // Change background color of the body element
 const randomColor = () => {
-  let bgColor;
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
   const b = Math.floor(Math.random() * 256);
