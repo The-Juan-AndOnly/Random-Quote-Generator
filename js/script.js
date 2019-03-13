@@ -63,9 +63,8 @@ const quotes = [
 const getRandomQuote = () => {
   // randomNumber variable assigned to a random number whcih will be between 0 and quotes.length
   let randomNumber = Math.floor(Math.random() * quotes.length);
-  return quotes[randomNumber];
-
   // return the value of the quotes araay at the randomNumber position
+  return quotes[randomNumber];
 };
 
 // Change background color of the body element
@@ -94,6 +93,7 @@ const printQuote = () => {
   } else {
     // set our isRunning to true to prevent user from clicking multiple times
     getQuotes.isRunning = true;
+    // setInterval for quotes to update every 3 seconds
     getQuotes.interval = setInterval(() => {
       //Get Quote Object and assign it to quote variable
       const quote = getRandomQuote();
@@ -109,6 +109,7 @@ const printQuote = () => {
       if (quote.year !== '' && quote.year !== null) {
         quoteString += `<span class="year">${quote.year}</span>`;
       }
+      // Condition to check if the "tag" is inspirational which will display along with the quote
       if (quote.tag === 'inspirational') {
         quoteString += ` <sup class="tag">${quote.tag}</sup>`;
       }
